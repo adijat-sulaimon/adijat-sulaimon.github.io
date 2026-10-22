@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adijat Sulaimon – Edge AI / Embedded ML Engineer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@500;700&display=swap">
+<style>
+:root{--bg:#EDF1F3;--card:#F8FAFB;--ink:#132029;--mute:#5A6B76;--line:#C9D3D9;--accent:#0E5A78;--accent-ink:#fff;
+--serif:"Source Serif 4",Georgia,serif;--sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1920;--card:#14232C;--ink:#E4ECF0;--mute:#93A5B0;--line:#27404D;--accent:#6BBBDD;--accent-ink:#0E1920;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1920;--card:#14232C;--ink:#E4ECF0;--mute:#93A5B0;--line:#27404D;--accent:#6BBBDD;--accent-ink:#0E1920;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{padding:10px clamp(20px,5vw,72px);display:flex;align-items:center;gap:16px;justify-content:space-between}
+nav{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+nav button{white-space:nowrap}
+button{font:inherit;color:inherit;background:none;border:0;padding:6px 10px;border-radius:6px;cursor:pointer}
+nav button:hover{background:var(--card)}
+.lang{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;flex:none}
+.lang button{border-radius:0;font-weight:600;font-size:14px}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{padding:0 clamp(20px,5vw,72px)}
+.hero{padding:56px 0 40px}
+.hero h1{font:700 clamp(2rem,6vw,3.4rem)/1.1 var(--serif);margin:0 0 16px;max-width:16em}
+.hero p{max-width:34em;color:var(--mute);margin:0 0 8px;font-size:1.1rem}
+.hero .name{color:var(--ink);font-weight:600}
+.wave{width:100%;height:auto;margin-top:28px;display:block}
+.wave .smooth{stroke:var(--line);fill:none;stroke-width:2}
+.wave .steps{stroke:var(--accent);fill:none;stroke-width:2.5;stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 2.2s ease-out .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+section{padding:36px 0;border-top:1px solid var(--line)}
+section h2{font:700 1.7rem/1.2 var(--serif);margin:0 0 6px}
+section>p{color:var(--mute);margin:0 0 22px;max-width:36em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:20px}
+.media{aspect-ratio:16/9;width:100%;display:grid;place-items:center;background:var(--bg);color:var(--mute);border-bottom:1px solid var(--line);font-size:.95rem;text-align:center;padding:12px}
+video.media{padding:0;object-fit:cover;display:block}
+.body{padding:20px}
+.body h3{font:700 1.25rem/1.3 var(--serif);margin:0 0 14px}
+dl{margin:0;display:grid;gap:12px}
+dt{font-weight:600}
+dd{margin:2px 0 0;color:var(--mute);font-style:italic}
+@media (min-width:700px){dl{grid-template-columns:150px 1fr;gap:12px 20px}dd{margin:0}}
+.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.links a{color:var(--accent);font-weight:600}
+footer{padding:24px clamp(20px,5vw,72px) 48px;color:var(--mute);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.wave .steps{animation:none;stroke-dashoffset:0}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+button.card{display:block;width:100%;text-align:left;padding:0;margin:0;border-radius:10px}
+button.card:hover{border-color:var(--accent)}
+button.card .body{padding:14px 16px}
+button.card h3{font-size:1.1rem;margin:0 0 6px}
+button.card p,.sum{margin:0;color:var(--mute);font-size:.95rem}
+.back{color:var(--accent);font-weight:600;padding-left:0;margin:28px 0 10px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.tags span{border:1px solid var(--line);border-radius:99px;padding:1px 10px;font-size:.85rem;color:var(--mute)}
+.muted{color:var(--mute)}#app>article.card{max-width:1100px}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:16px}.gallery img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:8px;background:#fff}figure{margin:0}figcaption{font-size:.85rem;color:var(--mute);margin-top:4px}dd.real{font-style:normal;color:var(--ink)}.role{font-weight:600;margin:10px 0 0}.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:14px}.figs figcaption{font-style:normal}.figs img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:8px;display:block;cursor:zoom-in}.brand{font-weight:600;white-space:nowrap}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<button class="brand" id="brand"></button><nav id="nav"></nav>
+<div class="lang" role="group" aria-label="Language">
+<button id="b-en" aria-pressed="true">EN</button><button id="b-de" aria-pressed="false">DE</button>
+</div></div></header>
+<main id="app"></main>
+<footer data-i="foot"></footer>
+<script>
+/* ---- Edit here: your details, links and projects ---- */
+var NAME="Adijat Sulaimon";
+var LINKS=[{label:"GitHub",href:""},{label:"LinkedIn",href:""},{label:"E-mail",href:""}];
+/* Add as many projects per category as you like. media.src = path/URL of your own video file; leave empty for a placeholder. */
+function P(en,de,sum_en,sum_de,tags){return{t:{en:en,de:de},s:{en:sum_en,de:sum_de},tags:tags||[],media:{src:"",poster:""},code:""}}
+var CROSS={t:{en:"Autonomous cross-traffic management",de:"Autonomes Kreuzungsmanagement"},
+ s:{en:"Design and verification of a first-come-first-served intersection controller for autonomous vehicles: UML design, an UPPAAL model and an ESP32 FreeRTOS prototype.",de:"Entwurf und Verifikation einer First-come-first-served-Kreuzungssteuerung für autonome Fahrzeuge: UML-Entwurf, UPPAAL-Modell und ESP32-FreeRTOS-Prototyp."},
+ tags:["UPPAAL","FreeRTOS","ESP32","VHDL","UML"],media:{src:"",poster:""},code:"",
+ role:{en:"Team project (3 people). My part: the requirement, use case, state machine, activity and sequence diagrams, and the UPPAAL model.",de:"Teamprojekt (3 Personen). Mein Anteil: Anforderungs-, Anwendungsfall-, Zustands-, Aktivitäts- und Sequenzdiagramme sowie das UPPAAL-Modell."},
+ imgs:[{at:0,src:"img/cross-traffic-architecture.png",cap:{en:"System architecture: the intersection controller and each vehicle exchange messages over a wireless network. The vehicle adds radar and camera for its own obstacle sensing.",de:"Systemarchitektur: Kreuzungssteuerung und Fahrzeuge tauschen Nachrichten über ein drahtloses Netzwerk aus. Das Fahrzeug nutzt zusätzlich Radar und Kamera zur eigenen Hinderniserkennung."}},
+ {at:2,src:"img/cross-traffic-state-machine.png",cap:{en:"State machines of vehicle (left) and ICS (right). Dashed arrows are the messages between them: directional signal, cross signal and completion signal.",de:"Zustandsautomaten von Fahrzeug (links) und ICS (rechts). Gestrichelte Pfeile sind die Nachrichten zwischen beiden: Richtungs-, Freigabe- und Abschlusssignal."}},
+ {at:2,src:"img/cross-traffic-uppaal.png",cap:{en:"The same behaviour as an UPPAAL model: four processes that synchronise on channels such as connect, queue and pass_signal.",de:"Dasselbe Verhalten als UPPAAL-Modell: vier Prozesse, die sich über Kanäle wie connect, queue und pass_signal synchronisieren."}},
+ {at:3,src:"img/cross-traffic-serial-monitor.png",cap:{en:"ESP32 serial monitor: each car is queued, receives a pass signal and reports completion, in arrival order.",de:"ESP32-Seriellmonitor: Jedes Fahrzeug wird eingereiht, erhält ein Freigabesignal und meldet den Abschluss, in Ankunftsreihenfolge."}},
+ {at:3,src:"img/cross-traffic-modelsim.png",cap:{en:"ModelSim waveform: three 8-bit values written to the FIFO and read back in the same order.",de:"ModelSim-Wellenform: Drei 8-Bit-Werte werden ins FIFO geschrieben und in gleicher Reihenfolge wieder gelesen."}}],
+ d:{en:["A four-way intersection without traffic lights needs a controller that lets autonomous vehicles cross without conflict. The goal was a vehicle-to-infrastructure design in which each car reports its direction to an intersection controller server (ICS) and crosses only after it is granted permission.","Real-time behaviour, collision avoidance as a hard requirement, wireless communication between vehicles and infrastructure, a four-way layout, and a scheduling rule that is predictable and easy to verify. We chose first come, first served for the first version. Nobody on the team had used FreeRTOS before.","I derived the design from a requirement hierarchy: the top-level requirement (control cross traffic autonomously) refined into safety, communication, four-way layout and real-time scheduling. From it I produced use case, state machine, activity and sequence diagrams for the vehicle and the ICS. The vehicle moves through arrival, connection, waiting, driving and completion. The ICS cycles through receiving, scheduling, decision and allowance, and selects the car with the earliest arrival. I translated these state machines into an abstract UPPAAL model in which vehicle and controller handshake over synchronised channels for connecting, queueing, passing and completion. The design also includes an extended version with track reservation and left, straight and right turns; the simpler FIFO variant was implemented. The team built the controller queue as two FreeRTOS tasks on an ESP32 (sender priority 2, receiver priority 1, queue depth 10) and as a 16-entry, 8-bit FIFO in VHDL, simulated in ModelSim.","The UPPAAL model covers a vehicle’s full cycle from arrival to completion and passes the deadlock check (A[] not deadlock). On the ESP32, ten cars were queued and released in strict arrival order, with pass and completion signals visible in the serial monitor. In ModelSim, the FIFO returned data in exactly the order it was written and signalled full and empty states with a flag.","The prototype covers the queue only. The wireless link is represented by serial messages, and the UPPAAL model has a single vehicle and no clocks. Next I would model several vehicles with timing in UPPAAL so that collision freedom can be checked, then replace the serial messages with real Wi-Fi communication and add deadline-based priorities."],
+ de:["Eine Vier-Wege-Kreuzung ohne Ampel braucht eine Steuerung, die autonomen Fahrzeugen das Kreuzen ohne Konflikte ermöglicht. Ziel war ein Fahrzeug-zu-Infrastruktur-Entwurf, bei dem jedes Fahrzeug seine Fahrtrichtung an einen Kreuzungs-Controller-Server (ICS) meldet und die Kreuzung erst nach Freigabe überquert.","Echtzeitverhalten, Kollisionsvermeidung als harte Anforderung, drahtlose Kommunikation zwischen Fahrzeugen und Infrastruktur, eine Vier-Wege-Kreuzung und eine Scheduling-Regel, die vorhersagbar und gut überprüfbar ist. Für die erste Version haben wir First come, first served gewählt. Im Team hatte zuvor niemand FreeRTOS genutzt.","Ich habe den Entwurf aus einer Anforderungshierarchie abgeleitet: Die Hauptanforderung (Kreuzungsverkehr autonom steuern) wird in Sicherheit, Kommunikation, Vier-Wege-Layout und Echtzeit-Scheduling verfeinert. Daraus entstanden Anwendungsfall-, Zustands-, Aktivitäts- und Sequenzdiagramme für Fahrzeug und ICS. Das Fahrzeug durchläuft Ankunft, Verbindung, Warten, Fahrt und Abschluss. Der ICS durchläuft Empfang, Scheduling, Entscheidung und Freigabe und wählt das Fahrzeug mit der frühesten Ankunft. Die Zustandsautomaten habe ich in ein abstraktes UPPAAL-Modell übersetzt, in dem Fahrzeug und Controller über synchronisierte Kanäle für Verbindung, Warteschlange, Freigabe und Abschluss kommunizieren. Der Entwurf enthält außerdem eine erweiterte Version mit Spurreservierung sowie Links-, Geradeaus- und Rechtsfahrt; umgesetzt wurde die einfachere FIFO-Variante. Das Team realisierte die Warteschlange des Controllers als zwei FreeRTOS-Tasks auf einem ESP32 (Sender mit Priorität 2, Empfänger mit Priorität 1, Queue-Tiefe 10) und als FIFO mit 16 Einträgen zu je 8 Bit in VHDL, simuliert in ModelSim.","Das UPPAAL-Modell deckt den gesamten Ablauf eines Fahrzeugs von der Ankunft bis zum Abschluss ab und besteht die Deadlock-Prüfung (A[] not deadlock). Auf dem ESP32 wurden zehn Fahrzeuge eingereiht und strikt in Ankunftsreihenfolge freigegeben; Freigabe- und Abschlusssignale sind im Seriellmonitor sichtbar. In ModelSim gab das FIFO die Daten genau in der geschriebenen Reihenfolge zurück und meldete volle und leere Zustände über ein Flag.","Der Prototyp deckt nur die Warteschlange ab. Die Funkverbindung wird durch serielle Meldungen dargestellt, und das UPPAAL-Modell enthält ein einzelnes Fahrzeug und keine Uhren. Als Nächstes würde ich mehrere Fahrzeuge mit Zeitverhalten in UPPAAL modellieren, um Kollisionsfreiheit prüfen zu können, danach die seriellen Meldungen durch echte WLAN-Kommunikation ersetzen und Prioritäten nach Deadline ergänzen."]}};
+var PROJECTS={
+ ml:[P("ML project title 1","ML-Projekttitel 1","One-sentence summary and result.","Zusammenfassung in einem Satz, mit Ergebnis.",["Python"]),P("ML project title 2","ML-Projekttitel 2","One-sentence summary and result.","Zusammenfassung in einem Satz, mit Ergebnis.",["Python"])],
+ edge:[P("Edge ML project title 1","Edge-ML-Projekttitel 1","One-sentence summary and result.","Zusammenfassung in einem Satz, mit Ergebnis.",["Quantisation"]),P("Edge ML project title 2","Edge-ML-Projekttitel 2","One-sentence summary and result.","Zusammenfassung in einem Satz, mit Ergebnis.",["Deployment"])],
+ emb:[CROSS,P("Embedded project title 2","Embedded-Projekttitel 2","One-sentence summary and result.","Zusammenfassung in einem Satz, mit Ergebnis.",["RTOS"])],
+ rob:[P("Robotics project title 1","Robotik-Projekttitel 1","One-sentence summary and result.","Zusammenfassung in einem Satz, mit Ergebnis.",["Control"])]
+};
+var T={
+en:{h1:"I make neural networks run on small hardware.",sub:"Edge AI / Embedded ML Engineer. Research Engineer at Hochschule Hamm-Lippstadt, based in Bochum, Germany.",
+ ml:"Machine learning",edge:"Edge ML",emb:"Embedded systems",rob:"Robotics",projects:"Projects",about:"About me",contact:"Contact",back:"All projects",n:" projects",
+ mlp:"Models, data and evaluation: how I choose, train and validate.",edgep:"Quantisation, partitioning and deployment on constrained devices.",
+ embp:"Firmware, drivers and hardware bring-up: from schematic to running system.",robp:"Perception, control and integration on real robots.",
+ aboutp:"I’m a Research Engineer at Hochschule Hamm-Lippstadt, working on embedded systems and machine learning. I’m pursuing an M.Eng. in Embedded Systems Engineering at FH Dortmund, after a B.Eng. in Electronic Engineering at Hochschule Hamm-Lippstadt. My focus is getting models to run within tight memory, latency and power limits.",
+ contactp:"Open to senior embedded ML and edge AI roles.",nolink:"(add link)",media:"Video or photo goes here",code:"Source code",
+ f:["Problem","Constraints","Approach","Result","Lessons"],
+ h:["What needed solving, and for whom?","Memory, latency, power, cost, deadline.","Options you weighed, and why you chose this one.","Measured numbers: accuracy, milliseconds, milliwatts, kilobytes.","What you would change next time."],
+ foot:"© 2026 Adijat Sulaimon"},
+de:{h1:"Ich bringe neuronale Netze auf kleine Hardware.",sub:"Edge-AI- / Embedded-ML-Ingenieurin. Research Engineer an der Hochschule Hamm-Lippstadt, wohnhaft in Bochum.",
+ ml:"Maschinelles Lernen",edge:"Edge ML",emb:"Eingebettete Systeme",rob:"Robotik",projects:"Projekte",about:"Über mich",contact:"Kontakt",back:"Alle Projekte",n:" Projekte",
+ mlp:"Modelle, Daten und Evaluation: wie ich auswähle, trainiere und validiere.",edgep:"Quantisierung, Partitionierung und Deployment auf ressourcenarmen Geräten.",
+ embp:"Firmware, Treiber und Hardware-Bring-up: vom Schaltplan zum laufenden System.",robp:"Wahrnehmung, Regelung und Integration auf echten Robotern.",
+ aboutp:"Ich bin Research Engineer an der Hochschule Hamm-Lippstadt und arbeite an Embedded Systems und maschinellem Lernen. Ich absolviere den M.Eng. in Embedded Systems Engineering an der FH Dortmund, zuvor B.Eng. Elektronik an der Hochschule Hamm-Lippstadt. Mein Schwerpunkt: Modelle unter knappen Speicher-, Latenz- und Energiegrenzen lauffähig machen.",
+ contactp:"Offen für Senior-Rollen in Embedded ML und Edge AI.",nolink:"(Link ergänzen)",media:"Hier kommt ein Video oder Foto hin",code:"Quellcode",
+ f:["Problem","Randbedingungen","Vorgehen","Ergebnis","Erkenntnisse"],
+ h:["Was war zu lösen, und für wen?","Speicher, Latenz, Leistungsaufnahme, Kosten, Termin.","Abgewogene Optionen und warum diese Wahl.","Gemessene Werte: Genauigkeit, Millisekunden, Milliwatt, Kilobyte.","Was du beim nächsten Mal anders machen würdest."],
+ foot:"© 2026 Adijat Sulaimon"}
+};
+var CATS=["ml","edge","emb","rob"],lang="en",view={n:"home"};
+function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+function media(p,t){var m;if(p.media.src){m=el("video","media");m.controls=true;m.preload="metadata";m.src=p.media.src;if(p.media.poster)m.poster=p.media.poster}else m=el("div","media",t.media);return m}
+function go(v,after){view=v;render();if(after){var n=document.getElementById(after);if(n)n.scrollIntoView({behavior:"smooth"})}else window.scrollTo(0,0)}
+function section(id,h,p){var s=el("section");s.id=id;s.appendChild(el("h2",null,h));if(p)s.appendChild(el("p",null,p));return s}
+function back(label,v){var b=el("button","back","← "+label);b.onclick=function(){go(v)};return b}
+function render(){
+ var t=T[lang],app=document.getElementById("app");app.innerHTML="";document.documentElement.lang=lang;
+ document.querySelectorAll("[data-i]").forEach(function(n){n.textContent=t[n.dataset.i]});
+ document.getElementById("brand").textContent=NAME;
+ var nav=document.getElementById("nav");nav.innerHTML="";
+ CATS.forEach(function(c){var b=el("button",null,t[c]);b.onclick=function(){go({n:"cat",c:c})};nav.appendChild(b)});
+ [["about"],["contact"]].forEach(function(x){var b=el("button",null,t[x[0]]);b.onclick=function(){go({n:"home"},x[0])};nav.appendChild(b)});
+ document.getElementById("b-en").setAttribute("aria-pressed",lang==="en");
+ document.getElementById("b-de").setAttribute("aria-pressed",lang==="de");
+ if(view.n==="home"){
+  var h=el("div","hero");h.appendChild(el("h1",null,t.h1));h.appendChild(el("p",null,t.sub));
+  h.insertAdjacentHTML("beforeend",WAVE);app.appendChild(h);
+  var sp=section("projects",t.projects),g=el("div","grid");
+  CATS.forEach(function(c){var k=el("button","card"),b=el("div","body");b.appendChild(el("h3",null,t[c]));b.appendChild(el("p",null,t[c+"p"]));b.appendChild(el("div","tags")).appendChild(el("span",null,PROJECTS[c].length+t.n));k.appendChild(b);k.onclick=function(){go({n:"cat",c:c})};g.appendChild(k)});
+  sp.appendChild(g);app.appendChild(sp);
+  app.appendChild(section("about",t.about,t.aboutp));
+  var sc=section("contact",t.contact,t.contactp),l=el("div","links");
+  LINKS.forEach(function(x){if(x.href){var a=el("a",null,x.label);a.href=x.href;l.appendChild(a)}else l.appendChild(el("span","muted",x.label+" "+t.nolink))});
+  sc.appendChild(l);app.appendChild(sc);
+ }else if(view.n==="cat"){
+  var c=view.c;app.appendChild(back(t.back,{n:"home"}));
+  var s=section(c,t[c],t[c+"p"]),g2=el("div","grid");
+  PROJECTS[c].forEach(function(p,i){var k=el("button","card");k.appendChild(media(p,t));var b=el("div","body");b.appendChild(el("h3",null,p.t[lang]));b.appendChild(el("p",null,p.s[lang]));
+   var tg=el("div","tags");p.tags.forEach(function(x){tg.appendChild(el("span",null,x))});b.appendChild(tg);k.appendChild(b);k.onclick=function(){go({n:"proj",c:c,i:i})};g2.appendChild(k)});
+  s.appendChild(g2);app.appendChild(s);
+ }else{
+  var p=PROJECTS[view.c][view.i];app.appendChild(back(t[view.c],{n:"cat",c:view.c}));
+  var card=el("article","card");card.appendChild(media(p,t));var b2=el("div","body");b2.appendChild(el("h3",null,p.t[lang]));b2.appendChild(el("p","sum",p.s[lang]));if(p.role)b2.appendChild(el("p","role",p.role[lang]));
+  var dl=el("dl");t.f.forEach(function(f,i){dl.appendChild(el("dt",null,f));var dd=el("dd",p.d?"real":null,p.d?p.d[lang][i]:t.h[i]);var fs=(p.imgs||[]).filter(function(m){return m.at===i});if(fs.length){var fg=el("div","figs");fs.forEach(function(m){var f=el("figure"),im=document.createElement("img");im.src=m.src;im.alt=m.cap[lang];im.loading="lazy";im.onerror=function(){f.style.display="none"};im.title=lang==="de"?"Zum Vergrößern klicken":"Click to enlarge";im.onclick=function(){window.open(m.src,"_blank")};f.appendChild(im);f.appendChild(el("figcaption",null,m.cap[lang]));fg.appendChild(f)});dd.appendChild(fg)}dl.appendChild(dd)});
+  dl.style.marginTop="16px";b2.appendChild(dl);
+  if(p.code){var l2=el("div","links"),a2=el("a",null,t.code);a2.href=p.code;l2.appendChild(a2);b2.appendChild(l2)}
+  card.appendChild(b2);app.style.paddingTop="0";app.appendChild(card);
+ }
+}
+var WAVE='<svg class="wave" id="wave" viewBox="0 0 600 110" role="img" aria-label="Signal sampled into discrete steps"><path class="smooth" id="smooth"/><path class="steps" id="steps"/></svg>';
+function setLang(l){lang=l;try{localStorage.setItem("lang",l)}catch(e){}render();drawWave()}
+function drawWave(){var d1="",d2="",y,x,k,sm=document.getElementById("smooth");if(!sm)return;
+ for(x=0;x<=600;x+=3){y=55+34*Math.sin(x/38)+14*Math.sin(x/11);d1+=(x?"L":"M")+x+" "+y.toFixed(1)+" "}
+ for(k=0;k<600;k+=24){y=Math.round((55+34*Math.sin(k/38)+14*Math.sin(k/11))/10)*10;d2+=(k?"L":"M")+k+" "+y+" L"+(k+24)+" "+y+" "}
+ sm.setAttribute("d",d1);document.getElementById("steps").setAttribute("d",d2)}
+document.getElementById("b-en").onclick=function(){setLang("en")};
+document.getElementById("b-de").onclick=function(){setLang("de")};
+document.getElementById("brand").onclick=function(){go({n:"home"})};
+(function(){var s="";try{s=localStorage.getItem("lang")||""}catch(e){}
+ lang=s==="de"||s==="en"?s:((navigator.language||"").slice(0,2)==="de"?"de":"en");render();drawWave()})();
+var _go=go;go=function(v,a){_go(v,a);drawWave()};
+</script>
+</body>
+</html>
